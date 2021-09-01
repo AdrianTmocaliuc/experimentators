@@ -23,7 +23,9 @@
 }
 .container--pudding {
   padding-bottom: 98px;
+//   Ania
   padding-top: 130px;
+
 }
 .products__list {
   margin-top: 145px;
@@ -67,6 +69,11 @@
 .product__btn {
   width: 40px;
   height: 40px;
+
+//   margin-top: 30px;
+//   margin-left: auto;
+//   margin-right: auto;
+
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -91,17 +98,34 @@
 
 .products__list li {
   padding-bottom: 120px;
+
 }
 @media screen and (min-width: 768px) {
   .products__list {
     display: flex;
+
+//     justify-content: space-between;
+//   }
+//   .products__list li {
+//     width: 220px;
+//   }
+
     flex-wrap: wrap;
   }
-
   .products__list li {
     padding-left: 10px;
     padding-right: 12px;
     margin-top: 0;
+
+//   }
+//   .product__btn {
+//     margin-top: 40px;
+//   }
+// }
+// @media screen and (min-width: 1280px) {
+//   .products__list li {
+//     width: 320px;
+
     width: calc((100% - 40px) / 3);
   }
   .products__list li:not(:last-child) {
@@ -115,6 +139,7 @@
   .products__list li {
     width: 320px;
     padding-top: 120px;
+
   }
   .product__btn {
     margin-top: 60px;
@@ -122,6 +147,7 @@
   .product__title {
     font-size: 30px;
   }
+
   .product__text {
     font-size: 16px;
   }
