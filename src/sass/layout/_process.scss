@@ -65,20 +65,20 @@
 }
 
 .description-container {
-  padding-top: 26px;
+  margin-top: 26px;
   font-family: var(--main-font-family);
   display: block;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    padding-top: 100px;
+    margin-top: 100px;
     display: flex;
-    padding-bottom: 66px;
+    margin-bottom: 66px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -99,19 +99,16 @@
   line-height: 176%;
   letter-spacing: 0.04em;
   color: var(--main-text-color);
-  margin-bottom: 35px;
-  max-width: 220px;
   margin: 0 auto;
   margin-bottom: 47px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-    max-width: 340px;
     margin-bottom: 49px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
-    max-width: 463px;
+    margin-bottom: 35px;
   }
 }
 
@@ -123,16 +120,13 @@
   line-height: 194%;
   letter-spacing: 0.04em;
   color: var(--paragraph-text-color);
-  max-width: 220px;
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-    max-width: 340px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 14px;
-    max-width: 463px;
   }
 }
 
@@ -142,6 +136,15 @@
 
 .list-container {
   display: block;
+  max-width: 220px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 340px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 463px;
+  }
 }
 
 .button-icon {
@@ -151,11 +154,9 @@
 
 .btn-margin {
   margin-top: 17px;
-  margin-left: 50px;
 
   @media screen and (min-width: 768px) {
     margin-top: 62px;
-    margin-left: 0;
   }
   @media screen and (min-width: 1280px) {
     margin-top: 47px;
@@ -271,11 +272,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  height: 470px;
+  height: 480px;
   background-color: #fff;
   padding: 40px;
   background-color: #ffe1e8;
   border-radius: 10px;
+  border: 4px solid #fff;
 
   @media screen and (min-width: 768px) {
     width: 400px;
@@ -324,7 +326,7 @@
   letter-spacing: 0.04em;
   color: #000000;
   text-align: center;
-  padding-bottom: 15px;
+  margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -350,4 +352,116 @@
     width: 70px;
     height: 70px;
   }
+}
+
+/* MOBILE MENU */
+.header-menu-button {
+  background-color: #000000;
+  border: none;
+  padding: 0;
+  fill: #000000;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header-menu-bttn {
+  border: none;
+  background-color: transparent;
+  fill: #d41443;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  background-color: #e17992;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  padding: 48px 0;
+  z-index: 100;
+  overflow: auto;
+  width: 250px;
+
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+
+  &.is-open {
+    transform: translateX(0%);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 254px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.mobile-menu-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 400px;
+}
+
+.header-menu-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  fill: #fff;
+  top: 23px;
+  right: 28px;
+
+  @media screen and (min-width: 768px) {
+    right: 34px;
+  }
+}
+
+.menu-button {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 19px;
+  margin-top: 23px;
+}
+
+.menu-button-icon {
+  fill: var(--main-title-color);
+  margin-left: 16px;
+}
+
+.menu-list__item {
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e18298;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &:last-child {
+    border-bottom: 1px solid #e18298;
+  }
+}
+
+.menu-list__link {
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}
+
+.current {
+  color: #d41443;
 }
